@@ -42,15 +42,43 @@
             outline: 1px rgb(96, 162, 248) solid;
         }
 
-        #adv-search {
+        #adv-search-heading {
+            color: #d93025;
+            font-size: 23px;
             text-align: left;
-            padding: 10px;
+            font-weight: lighter;
+            margin-left: 25px;
+            margin-bottom: 20px;
         }
 
-        #adv-search>input {
-            padding: 5px;
-            margin: 5px;
+        #adv-search-cont {
+            margin-top: 20px;
+        }
 
+        .adv-search-couple>label {
+            display: inline-block;
+            min-width: 200px;
+        }
+
+        .adv-search-couple>input {
+            padding: 8px;
+            border: 1px solid lightgrey;
+            text-align: left;
+            font-size: small;
+            width: 60%;
+        }
+
+        #adv-sub-button {
+            color: white;
+            background-color: #4d90fe;
+            background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+            padding: 10px;
+            border: 1px white solid;
+        }
+
+        #adv-sub-button:hover {
+            background-image: -webkit-linear-gradient(top, #4d90fe, #2b6ace);
+            border: 1px rgba(12, 12, 151, 0.486) solid
         }
     </style>
 </head>
@@ -58,36 +86,42 @@
 
 <body>
     <div class="nav-links">
-        <div>
-            <a href="index.html">Google Search</a>
-        </div>
-        <form action="https://www.google.com/search" style="text-align: center; padding: 40px;">
-            <div id="adv-search">
-                <h2>Find pages with...</h2>
-                <div>
-                    all these words:
+        <a href="index.html">Google Search</a>
+
+    </div>
+
+    <h1 id="adv-search-heading">Advanced Search</h1>
+
+    <div style="border-bottom: #ebebeb solid 1px;"></div>
+
+
+    <div id="adv-search-cont">
+        <form action="https://www.google.com/search">
+            <div>
+                <h2 style="font-weight: lighter;">Find pages with...</h2>
+                <div class="adv-search-couple">
+                    <label>all these words:</label>
                     <input type="text" name="as_q">
                 </div>
-                <div>
-                    this exact word or phrase:
+                <div class="adv-search-couple">
+                    <label>this exact word or phrase:</label>
                     <input type="text" name="as_epq">
                 </div>
-                <div>
-                    any of these words:
+                <div class="adv-search-couple">
+                    <label>any of these words:</label>
                     <input type="text" name="as_oq">
                 </div>
-                <div>
-                    none of these words:
+                <div class="adv-search-couple">
+                    <label>none of these:</label>
                     <input type="text" name="as_eq">
+                </div>
+                <div>
+                    <input id="adv-sub-button" type="submit" value="Advanced Search">
                 </div>
 
             </div>
-            <div>
-                <input class="sub-button" type="submit" value="Advanced Search">
-            </div>
         </form>
-
-
+    </div>
 </body>
 
 </html>
