@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        div {
+            padding: 5px;
+        }
+
+        .nav-links {
+            text-align: right;
+            margin-right: 5px;
+        }
+
+        #search-box {
+            padding: 10px;
+            width: 400px;
+            border: 1px solid lightgrey;
+            border-radius: 20px;
+            text-align: left;
+            font-size: medium;
+        }
+
+        .sub-button {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(247, 247, 247);
+            border: 1px white solid;
+            border-radius: 5px;
+        }
+
+        .sub-button:hover {
+            border: 1px rgb(221, 221, 221) solid;
+        }
+
+        input:focus {
+            outline: 1px rgb(96, 162, 248) solid;
+        }
+
+        #adv-search {
+            text-align: left;
+            padding: 10px;
+        }
+
+        #adv-search>input {
+            padding: 5px;
+            margin: 5px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="nav-links">
+        <div>
+            <a href="index.html">Google Search</a>
+        </div>
+        <form action="https://www.google.com/search" style="text-align: center; padding: 40px;">
+            <div id="adv-search">
+                <h2>Find pages with...</h2>
+                <div>
+                    all these words:
+                    <input type="text" name="as_q">
+                </div>
+                <div>
+                    this exact word or phrase:
+                    <input type="text" name="as_epq">
+                </div>
+                <div>
+                    any of these words:
+                    <input type="text" name="as_oq">
+                </div>
+                <div>
+                    none of these words:
+                    <input type="text" name="as_eq">
+                </div>
+
+            </div>
+            <div>
+                <input class="sub-button" type="submit" value="Advanced Search">
+            </div>
+        </form>
+
+
+</body>
+
+</html>
